@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="Fast online YouTube video and audio downloader." />
+  <title>YT Downloader, Fast YouTube Video Downloader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="YT Downloader home">
+      <span class="brand-mark">▶</span><span>YT<span>Downloader</span></span>
+    </a>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">FAST · FREE · SIMPLE</div>
+      <h1>Download YouTube videos<br /><span>without the hassle.</span></h1>
+      <p class="hero-copy">Paste a public YouTube link and choose the video quality or MP3 audio you want.</p>
+
+      <form id="downloadForm" class="search-card">
+        <div class="input-wrap">
+          <span class="link-icon">↗</span>
+          <input id="urlInput" type="url" autocomplete="off" placeholder="Paste YouTube video link here..." required />
+          <button id="clearBtn" class="clear" type="button" hidden>×</button>
+        </div>
+        <button id="analyzeBtn" class="download-btn" type="submit"><span>Download</span><span>↓</span></button>
+      </form>
+      <div class="paste-hint"><button id="pasteBtn" type="button">Paste from clipboard</button><span>•</span><span>No registration required</span></div>
+      <div id="status" class="status" aria-live="polite"></div>
+    </section>
+
+    <section id="result" class="result hidden">
+      <div class="result-head">
+        <div class="video-preview"><img id="thumb" alt="Video thumbnail" /></div>
+        <div class="video-info">
+          <div class="tiny-label">VIDEO FOUND</div>
+          <h2 id="videoTitle">Video title</h2>
+          <p id="videoMeta"></p>
+        </div>
+      </div>
+      <div class="tabs">
+        <button class="tab active" data-tab="video">Video <span>MP4</span></button>
+        <button class="tab" data-tab="audio">Audio <span>MP3</span></button>
+      </div>
+      <div id="formatList" class="format-list"></div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="section-title"><span>WHY USE IT</span><h2>Everything you need,<br />nothing you don't.</h2></div>
+      <div class="feature-grid">
+        <article><div class="feature-icon">⚡</div><h3>Fast processing</h3><p>Analyze links quickly and get available download options in seconds.</p></article>
+        <article><div class="feature-icon">HD</div><h3>Quality choices</h3><p>Pick from the resolutions and audio qualities actually available for the source.</p></article>
+        <article><div class="feature-icon">↗</div><h3>Works everywhere</h3><p>Use the same clean browser experience on phones, tablets and desktops.</p></article>
+        <article><div class="feature-icon">✓</div><h3>No account needed</h3><p>Paste a link and start. There is no sign-up flow blocking the downloader.</p></article>
+      </div>
+    </section>
+
+    <section id="how" class="steps section">
+      <div class="section-title"><span>HOW IT WORKS</span><h2>Download in four simple steps.</h2></div>
+      <div class="step-grid">
+        <div><b>01</b><h3>Copy the link</h3><p>Open a public YouTube video and copy its URL.</p></div>
+        <div><b>02</b><h3>Paste it here</h3><p>Put the link into the downloader above.</p></div>
+        <div><b>03</b><h3>Choose quality</h3><p>Compare MP4 video or MP3 audio options.</p></div>
+        <div><b>04</b><h3>Download</h3><p>Choose your format and save the file.</p></div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq section">
+      <div class="section-title"><span>FAQ</span><h2>Questions, answered.</h2></div>
+      <details><summary>Does it work on mobile?</summary><p>Yes. The interface is responsive and works in modern mobile browsers.</p></details>
+      <details><summary>Can I download MP3 audio?</summary><p>Yes, when the source can be processed, the Audio tab provides an MP3 option generated from the best available audio.</p></details>
+      <details><summary>Why isn't a certain quality available?</summary><p>Available formats depend on the source and what the downloader can retrieve. The site shows the options returned by the source rather than inventing unavailable qualities.</p></details>
+      <details><summary>Do I need an account?</summary><p>No account is required for the basic workflow.</p></details>
+    </section>
+
+    <section class="notice">Only download videos you own or have permission to save. Respect copyright and the terms that apply to the content you access.</section>
+  </main>
+
+  <footer><div class="brand small"><span class="brand-mark">▶</span><span>YT<span>Downloader</span></span></div><p>Simple tools for saving media you have permission to use.</p></footer>
+  <script src="/app.js"></script>
+</body>
+</html>
