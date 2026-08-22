@@ -5,9 +5,11 @@ ENV DENO_INSTALL=/usr/local
 ENV PATH="/usr/local/bin:${PATH}"
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends curl ca-certificates ffmpeg python3 \
+    && apt-get install -y --no-install-recommends curl ca-certificates ffmpeg python3 unzip \
     && curl -fsSL https://deno.land/install.sh | sh \
     && ln -sf /usr/local/bin/deno /usr/bin/deno \
+    && deno --version \
+    && ffmpeg -version \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
