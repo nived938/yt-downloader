@@ -4,7 +4,7 @@ import helmet from 'helmet';
 import path from 'node:path';
 import os from 'node:os';
 import fs from 'node:fs/promises';
-import ytDlp from 'yt-dlp-exec';
+import ytDlp from 'youtube-dl-exec';
 import ffmpegPath from 'ffmpeg-static';
 
 const app = express();
